@@ -11,9 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
-
+import com.board.domain.boardVO;
 import com.board.service.BoardService;
 
 
@@ -32,8 +32,22 @@ public class BoardController {
 
 		model.addAttribute("list",service.ListAll()); // jsp에 심부름할 내역(서비스 호출)
 
-		
-
 	}
-
+	
+	@RequestMapping(value = "/regist", method = RequestMethod.GET) // GET 방식으로 페이지 호출
+	public void registerGET(boardVO board, Model model) throws Exception{
+		
+	}
+	
+	@RequestMapping(value = "/regist", method = RequestMethod.POST)
+	public String registPOST(boardVO board, RedirectAttributes rttr) throws Exception{
+		
+				service.regist(board);
+		
+			return "redirect:/listAll";
+		}
+		
+		
 }
+
+
