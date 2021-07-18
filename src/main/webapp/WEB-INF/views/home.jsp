@@ -3,8 +3,10 @@
 <%@ page session="false"%>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<title>Home</title>
 </head> 
+
 <form action = "listAll" method = "get">
 
 <body>

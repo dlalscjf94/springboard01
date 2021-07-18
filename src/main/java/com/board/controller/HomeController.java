@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Handles requests for the application home page.
+ * https://m.blog.daum.net/chan-0124/68?category=263225
  */
 @Controller
 public class HomeController {

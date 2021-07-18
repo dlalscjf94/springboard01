@@ -23,7 +23,7 @@ WHERE bno = #{bno}
 </select>
 
 <update id="update">
-UPDATE tbl_board 
+UPDATE tb1_board 
 SET title =#{title}, content =#{content} 
 WHERE bno = #{bno}
 </update>
